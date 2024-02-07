@@ -10,7 +10,7 @@ try:
 
 except Exception as er:
     error_type, error_obj, error_info = sys.exc_info()
-    print('ERROR FOR LINK:', URLError)
+    print('ERROR FOR LINK:', URLError) 
     print(error_type, 'Line:', error_info.tb_lineno)
 
 time.sleep(3)
@@ -19,9 +19,6 @@ links = scrap.find_all('div', attrs={'class':'cb-nws-intr'})
 date = scrap.find_all('div', attrs={'class':'crd-cntxt'})
 
 
-
-for info in links:
-    print(info.text + "\n")
 for dat in date:
-     print(dat.text)
-
+    for info in links:
+        print(info.text + "\n" + dat.text)

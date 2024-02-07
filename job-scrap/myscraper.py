@@ -17,15 +17,15 @@ for job in jobs:
 
 
 
-        print(f'''
-        Company Name: {company_name}
-        Job Title: {job_title}
-        Skills: {skills}
-        On site time: {onsite_time}
-              ''')
+        # print(f'''
+        # Company Name: {company_name}
+        # Job Title: {job_title}
+        # Skills: {skills}
+        # On site time: {onsite_time}
+        #       ''')
 
-        # with open('jobs.csv', 'a') as file:
-        #     writer = csv.writer(file)
-        #     writer.writerow([company_name, job_title, skills, onsite_time])
+        with open('jobs.csv', 'a') as file:
+            writer = csv.writer(file)
+            writer.writerow([company_name, job_title, skills, onsite_time])
 
 
